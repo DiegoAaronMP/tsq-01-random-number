@@ -19,7 +19,8 @@ function App() {
     refetch
   } = useQuery({
     queryKey: ['randomNumber'],
-    queryFn: getRandomNumber
+    queryFn: getRandomNumber,
+    // retry: false - Por defecto Tanstack hace 3 retries antes de retornar un error
   })
 
   return (
